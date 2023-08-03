@@ -8,6 +8,7 @@ source /opt/intel/openvino_2022/setupvars.sh
 export ENEMY_COLOR=red
 export HAS_SWITCH=has
 export ROBOT_TYPE=balance2
+export IMU_TRIGGER=false
 export LAUNCH=balance
 # camera
 export CAMERA_TYPE=hk_camera
