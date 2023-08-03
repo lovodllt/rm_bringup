@@ -1,8 +1,8 @@
 <launch>
     <arg name="robot_type" default="$(env ROBOT_TYPE)" doc="Robot type [standard, hero, engineer]"/>
-    <arg name="enable_imu_trigge" default="$(env ENABLE_IMU_TRIGGER)" doc="Bool"/>
     <arg name="load_controller" default="true"/>
     <arg name="balance" default="true"/>
+    <arg name="enable_imu_trigger" default="$(env ENABLE_IMU_TRIGGER)" doc="Bool"/>
 
     <rosparam file="$(find rm_dbus)/config/dbus.yaml" command="load"/>
     <rosparam file="$(find rm_config)/config/rm_controllers/$(arg robot_type).yaml"/>
