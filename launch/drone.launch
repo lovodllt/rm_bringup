@@ -3,7 +3,7 @@
     <arg name="load_controller" default="true"/>
     <arg name="ekf" default="false"/>
     <arg name="camera_tf" default="false"/>
-    <arg name="enable_imu_trigger" default="$(env ENABLE_IMU_TRIGGER)" doc="Bool"/>
+    <arg name="imu_trigger" default="$(env IMU_TRIGGER)" doc="Bool"/>
 
     <rosparam file="$(find rm_config)/config/rm_control/rm_dbus/dbus.yaml" command="load"/>
     <rosparam file="$(find rm_config)/config/rm_control/rm_hw/$(arg robot_type).yaml" command="load"/>
@@ -18,7 +18,7 @@
     </include>
 
     <include file="$(find rm_config)/launch/vision/camera.launch">
-        <arg name="enable_imu_trigger" value="$(arg enable_imu_trigger)"/>
+        <arg name="imu_trigger" value="$(arg imu_trigger)"/>
     </include>
     <include file="$(find rm_config)/launch/vision/vision_loader.launch">
     </include>
