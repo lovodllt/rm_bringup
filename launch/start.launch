@@ -11,7 +11,7 @@
     <include file="$(find rm_config)/launch/rm_hw.launch"/>
 
     <include file="$(find rm_config)/launch/vision/camera.launch">
-        <arg name="enable_imu_trigger" value="$(arg enable_imu_trigger)"/>
+        <arg name="imu_trigger" value="$(arg imu_trigger)"/>
     </include>
     <include file="$(find rm_config)/launch/vision/vision_loader.launch"/>
 
