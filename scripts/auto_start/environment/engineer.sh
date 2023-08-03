@@ -3,6 +3,7 @@
 # basic
 export HAS_SWITCH=no
 export ROBOT_TYPE=engineer
+export HW_NAME=rm_can_hw
 export LAUNCH=engineer
 # camera
 export CAMERA_TYPE=hk_camera

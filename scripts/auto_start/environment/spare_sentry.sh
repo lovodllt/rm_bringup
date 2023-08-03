@@ -3,6 +3,8 @@
 # basic
 export HAS_SWITCH=has
 export ROBOT_TYPE=spare_sentry
+export IMU_TRIGGER=true
+export HW_NAME=rm_can_hw
 export LAUNCH=sentry
 # camera
 export MVCAM_SDK_PATH=/opt/MVS
