@@ -1,5 +1,5 @@
 [Unit]
-Description=rm ecat auto startup
+Description=rm ecat hardware auto startup
 After=network-online.target
 [Service]
 User=root
