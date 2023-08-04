@@ -8,4 +8,5 @@ if [[ $HAS_SWITCH == has ]]; then
 else
   export ROS_IP=127.0.0.1
 fi
+sudo chmod -t /tmp
 mon launch --disable-ui rm_bringup vision_start.launch
