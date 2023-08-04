@@ -6,7 +6,7 @@ export HAS_SWITCH=has
 export ROBOT_TYPE=standard5
 export IMU_TRIGGER=false
 export HW_NAME=rm_ecat_hw
-export LAUNCH=start
+export LAUNCH=ecat_start
 # camera
 export CAMERA_TYPE=hk_camera
 export CAMERA_CLASS=HKCameraNodelet
