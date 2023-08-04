@@ -4,6 +4,7 @@
 export HAS_SWITCH=has
 export ROBOT_TYPE=sentry
 export LAUNCH=sentry
+export PLANNER_TYPE=pid_planner_params
 # camera
 export MVCAM_SDK_PATH=/opt/MVS
 export MVCAM_COMMON_RUNENV=/opt/MVS/lib
