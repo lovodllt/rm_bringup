@@ -1,10 +1,10 @@
 [Unit]
-Description=rm can hardware auto startup
+Description=rm auto startup
 After=network-online.target
 [Service]
-User=root
+User=dynamicx
 Type=simple
 #Type=forking
-ExecStart=/bin/bash -c "/home/dynamicx/rm_can_start.sh"
+ExecStart=/bin/bash -c "~/vision_start.sh"
 [Install]
 WantedBy=multi-user.target
