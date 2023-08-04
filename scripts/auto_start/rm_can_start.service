@@ -1,5 +1,5 @@
 [Unit]
-Description=rm auto startup
+Description=rm can hardware auto startup
 After=network-online.target
 [Service]
 User=dynamicx
