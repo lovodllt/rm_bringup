@@ -1,8 +1,10 @@
 #!/bin/bash
 # Modifier following environment variable when deploy robot.
 # basic
-export HAS_SWITCH=no
+export ENEMY_COLOR=red
+export HAS_SWITCH=has
 export ROBOT_TYPE=engineer
+export IMU_TRIGGER=false
 export HW_NAME=rm_can_hw
 export LAUNCH=engineer
 # camera

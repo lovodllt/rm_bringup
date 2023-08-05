@@ -13,6 +13,4 @@
     <include file="$(find rm_config)/launch/manual.launch"/>
    <include file="$(find rm_config)/launch/referee.launch"/>
     <include file="$(find engineer_arm_config)/launch/servo.launch"/>
-    <include file="$(find hk_camera)/launch/single_device.launch"/>
-<!--    <include file="$(find rm_config)/launch/vision/camera.launch"/>-->
 </launch>
