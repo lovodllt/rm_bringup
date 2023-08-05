@@ -7,7 +7,7 @@ source /opt/ros/noetic/setup.bash
 source /home/dynamicx/rm_ws/devel/setup.bash
 source /home/dynamicx/mpc_ws/devel/setup.bash
 source /home/dynamicx/environment.sh
-source /opt/intel/openvino_2022/bin/setupvars.sh
+source /home/dynamicx/intel/openvino_2022/setupvars.sh
 if [[ $HAS_SWITCH == has ]]; then
   export ROS_IP=192.168.100.2
 else
