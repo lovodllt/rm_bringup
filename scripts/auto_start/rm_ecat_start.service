@@ -2,9 +2,10 @@
 Description=rm ecat hardware auto startup
 After=network-online.target
 [Service]
-User=root
+User=dynamicx
 Type=simple
 #Type=forking
 ExecStart=/bin/bash -c "/home/dynamicx/rm_ecat_start.sh"
+LimitRTPRIO=infinity
 [Install]
 WantedBy=multi-user.target
