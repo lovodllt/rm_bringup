@@ -4,7 +4,7 @@
 export ENEMY_COLOR=red
 export HAS_SWITCH=has
 export ROBOT_TYPE=standard3
-export IMU_TRIGGER=true
+export IMU_TRIGGER=false
 export HW_NAME=rm_can_hw
 export LAUNCH=start
 # camera
