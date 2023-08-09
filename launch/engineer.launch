@@ -7,10 +7,11 @@
     <rosparam file="$(find rm_config)/config/rm_controllers/engineer.yaml" command="load"/>
     <node name="exchanger" pkg="exchanger" type="exchanger" respawn="false"/>
     <node name="rm_dbus" pkg="rm_dbus" type="rm_dbus" respawn="false"/>
-    <include if="$(arg load_rm_hw)" file="$(find rm_config)/launch/rm_hw.launch"/>
+    <include if="$(arg load_rm_hw)" file="$(find rm_config)/launch/rm_ecat_hw.launch"/>
     <include file="$(find engineer_arm_config)/launch/load_move_group.launch"/>
     <include file="$(find engineer_middleware)/launch/load.launch"/>
     <include file="$(find rm_config)/launch/manual.launch"/>
    <include file="$(find rm_config)/launch/referee.launch"/>
     <include file="$(find engineer_arm_config)/launch/servo.launch"/>
+<!--    <include file="$(find hk_camera)/launch/single_device.launch"/>-->
 </launch>
