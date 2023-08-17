@@ -1,12 +1,16 @@
 #!/bin/bash
+
+# Source following special script
+source /opt/intel/openvino_2022/setupvars.sh
+
 # Modifier following environment variable when deploy robot.
 # basic
 export ENEMY_COLOR=red
-export HAS_SWITCH=has
-export ROBOT_TYPE=standard3
-export IMU_TRIGGER=false
-export HW_NAME=rm_ecat_hw
-export LAUNCH=start
+export HAS_SWITCH=nohas
+export ROBOT_TYPE=drone
+export IMU_TRIGGER=true
+export HW_NAME=rm_can_hw
+export LAUNCH=drone
 # camera
 export CAMERA_TYPE=hk_camera
 export CAMERA_CLASS=HKCameraNodelet
