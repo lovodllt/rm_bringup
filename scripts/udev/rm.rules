@@ -2,9 +2,9 @@
 # set the udev rule
 
 # use for usb2can
-# ACTION=="add",KERNELS=="3-5.1:1.0",SUBSYSTEMS=="usb",MODE:="0777",SYMLINK+="usbDbus"
-# ACTION=="add",KERNELS=="3-5.2:1.0",SUBSYSTEMS=="usb",MODE:="0777",SYMLINK+="usbReferee"
+# ACTION=="add",KERNELS=="3-4.1:1.0",SUBSYSTEMS=="usb",MODE:="0777",SYMLINK+="usbDbus"
+# ACTION=="add",KERNELS=="3-4.2:1.0",SUBSYSTEMS=="usb",MODE:="0777",SYMLINK+="usbReferee"
 
 # use for ecat
-ACTION=="add",KERNELS=="3-5.2:1.0",SUBSYSTEMS=="usb",MODE:="0777",SYMLINK+="usbDbus"
-ACTION=="add",KERNELS=="3-5.1:1.0",SUBSYSTEMS=="usb",MODE:="0777",SYMLINK+="usbReferee"
+ACTION=="add",KERNELS=="3-4.2:1.0",SUBSYSTEMS=="usb",MODE:="0777",SYMLINK+="usbDbus"
+ACTION=="add",KERNELS=="3-4.1:1.0",SUBSYSTEMS=="usb",MODE:="0777",SYMLINK+="usbReferee"
