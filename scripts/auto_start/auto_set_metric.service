@@ -9,4 +9,3 @@ ExecStart=/bin/bash -c "/home/dynamicx/auto_set_metric.sh"
 LimitRTPRIO=infinity
 [Install]
 WantedBy=basic.target
-
