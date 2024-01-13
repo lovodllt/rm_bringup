@@ -1,0 +1,12 @@
+[Unit]
+Description=Auto set metric to solve the confict between ethercat and switch.
+After=network-online.target
+[Service]
+User=dynamicx
+Type=simple
+ExecStartPre=/bin/sleep 3
+ExecStart=/bin/bash -c "/home/dynamicx/auto_set_metric.sh"
+LimitRTPRIO=infinity
+[Install]
+WantedBy=basic.target
+
