@@ -17,7 +17,7 @@ check_and_restart_node() {
     local executable=${package_exec[1]}
 
     if ! rosnode list | grep -q $node; then
-        echo "node ${node} not run£¬trying to restart..."
+        echo "node ${node} not run,trying to restart..."
         rosnode kill $node 2>/dev/null
         sleep 1
         rosrun $package $executable &
