@@ -1,8 +1,8 @@
 #!/bin/bash
-
 source /opt/ros/noetic/setup.bash
-export ROS_PACKAGE_PATH=~/rm_ws:$ROS_PACKAGE_PATH
-source ~/rm_ws/devel/setup.bash
+sudo chown dynamicx:dynamicx "$0"
+source /home/dynamicx/rm_ws/devel/setup.bash
+source /home/dynamicx/.bashrc
 
 declare -A nodes=(
 #    ["/node_name"]="package node_executable"
@@ -18,9 +18,8 @@ check_and_restart_node() {
 
     if ! rosnode list | grep -q $node; then
         echo "node ${node} not run,trying to restart..."
-        rosnode kill $node 2>/dev/null
-        sleep 1
-        rosrun $package $executable &
+        /opt/ros/noetic/bin/rosrun $package $executable &
+        echo "Executing $package $executable..."
     fi
 }
 
@@ -28,6 +27,6 @@ while true; do
     for node in "${!nodes[@]}"; do
         check_and_restart_node $node "${nodes[$node]}"
     done
-    sleep 5
+    sleep 3
 done
 
