@@ -4,10 +4,10 @@ source /opt/ros/noetic/setup.bash
 export ROS_PACKAGE_PATH=~/rm_ws:$ROS_PACKAGE_PATH
 source ~/rm_ws/devel/setup.bash
 
-if [[ ! -d ~/Documents ]]; then
-	mkdir ~/Documents
+if [[ ! -d ~/Documents/vision ]]; then
+	mkdir ~/Documents/vision
 fi
-cd ~/Documents
+cd ~/Documents/vision
 
 newdir=$(date "+%Y%m%d_%H_%M")
 newhour=$(date "+%Y%m%d_%H")
