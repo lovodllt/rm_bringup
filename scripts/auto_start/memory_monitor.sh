@@ -7,17 +7,23 @@ if [[ -d ~/Documents/control/ ]]; then
 	cd ~/Documents/control/
 	current_date=$(date "+%d")
 	current_month=$(date "+%m")
+	current_year=$(date "+%y")
 	lines=$(ls -1 | wc -l)
 	for((i=1;i<=$lines;i++));
 	do
 		dir=$(ls -1 | sed -n ${i}p)
+		dir_year=$(echo $dir | sed -E 's/^[0-9]{2}([0-9]{2}).*/\1/g')
+    if [[ $dir_year -lt $current_year  && $current_month -gt 1 ]]; then    # 删除上一年12月末的内容
+      sudo rm -rf $dir
+      continue
+    fi
 		dir_month=$(echo $dir | sed -E 's/^[0-9]{4}([0-9]{2}).*/\1/g')
-		if [[ $dir_month -lt $current_month ]]; then	# 删除留存一个月以上的录制内容
+		if [[ $((current_month - dir_month)) -ge 2 ]]; then	# 删除前一个月十五号后剩下的录制内容
 			sudo rm -rf $dir
 			continue
 		fi
-		dir_date=$(echo $dir | sed -E 's/^[0-9]{6}([0-9]{2}).*/\1/g')	#删除七天前的录制内容
-		if [[ $(expr $current_date - $dir_date) -ge 7 ]]; then
+		dir_date=$(echo $dir | sed -E 's/^[0-9]{6}([0-9]{2}).*/\1/g')	#删除十五天前的录制内容
+		if [[ $(expr $current_date - $dir_date) -ge 15 ]]; then
 			sudo rm -rf $dir
 		fi
 	done
