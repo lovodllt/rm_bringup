@@ -1,6 +1,6 @@
 [Unit]
 Description=ROS Nodes Reconnection
-After=rm_ecat_start.service
+After=rm_ecat_start.service start_master.service
 [Service]
 Type=simple
 ExecStart=/bin/bash -c "/home/dynamicx/node_reconnection.sh"
