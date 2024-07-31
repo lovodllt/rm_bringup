@@ -20,6 +20,8 @@ else
     echo "Failed to set metric for ${EXCHANGE_IFACE}"
     exit 1
 fi
+
+sleep 10
 done
 
 echo "auto_set_metric.sh executed successfully!"
