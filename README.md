@@ -130,6 +130,12 @@ The following scripts run all codes on  robot.
 
 - Double click to run it.
 
+### create_crontab_schedule.sh
+- Use ./create_crontab_schedule.sh to run it,then it will write a file into crontab,which could be used to make an ecat watchdog files
+
+#### ecat_watchdog.sh
+- Use ./create_crontab_schedule.sh to write into crontab, it will automatically check and restart ecat
+
 ## Bugs & Feature Requests
 
 Please report bugs and request features using the [Issue Tracker](https://github.com/gdut-dynamic-x/rm_template/issues)
