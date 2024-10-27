@@ -7,7 +7,6 @@ source /opt/intel/openvino_2022/setupvars.sh
 # basic
 export ENEMY_COLOR=red
 ip addr show | grep -q -w '192.168.100.2/24' && export HAS_SWITCH=has || export HAS_SWITCH=no
-#export HAS_SWITCH=has
 export ROBOT_TYPE=balance2
 export IMU_TRIGGER=false
 export HW_NAME=rm_ecat_hw

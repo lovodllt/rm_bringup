@@ -8,15 +8,8 @@ while true; do
     if ! ip addr show | grep -q -w "$target_ip"; then
         if [ "$restarted" = false ]; then
             echo "IP $target_ip not found."
-            
-            if [[ "$ROBOT_TYPE" == "engineer" || "$ROBOT_TYPE" == "engineer2" ]]; then
-                echo "Restarting services: $service_name, start_master.service..."
-                sudo systemctl restart "$service_name" start_master.service
-            else
-                echo "Restarting services: $service_name, start_master.service, vision_start_service..."
-                sudo systemctl restart "$service_name" start_master.service vision_start.service
-            fi
-
+            echo "Restarting services: $service_name, start_master.service, vision_start_service..."
+            sudo systemctl restart "$service_name" start_master.service vision_start.service
             echo "Services restarted successfully.Exiting."
             restarted=true
             break

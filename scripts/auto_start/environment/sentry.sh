@@ -2,7 +2,6 @@
 # Modifier following environment variable when deploy robot.
 # basic
 ip addr show | grep -q -w '192.168.100.2/24' && export HAS_SWITCH=has || export HAS_SWITCH=no
-#export HAS_SWITCH=has
 export ROBOT_TYPE=sentry
 export IMU_TRIGGER=true
 export HW_NAME=rm_can_hw
