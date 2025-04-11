@@ -6,7 +6,7 @@ source /opt/intel/openvino_2022/setupvars.sh
 # Modifier following environment variable when deploy robot.
 # basic
 export ENEMY_COLOR=red
-export HAS_SWITCH=has
+ip addr show | grep -q -w '192.168.100.2/24' && export HAS_SWITCH=has || export HAS_SWITCH=no
 export ROBOT_TYPE=balance2
 export IMU_TRIGGER=false
 export HW_NAME=rm_ecat_hw
